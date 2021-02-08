@@ -8,7 +8,7 @@ import torch.nn as nn
 from torch.nn import init
 from torchvision import models
 
-# PretrainedModel = 'pretrainedmodels/resnet50.pth' # (PretrainedModel = Path to the ImageNet pretrained model)
+# PretrainedModel = 'models/imagenet-pretrained/resnet50.pth' # (PretrainedModel = Path to the ImageNet pretrained model)
 ######################################################################
 def weights_init_kaiming(m):
     classname = m.__class__.__name__
