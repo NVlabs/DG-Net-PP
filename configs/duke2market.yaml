@@ -1,0 +1,119 @@
+# Copyright (C) 2017 NVIDIA Corporation.  All rights reserved.
+# Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+apex: false                      # Set True to use float16.
+B_w: 0.2                         # The loss weight of fine-grained loss, which is named as `alpha` in the DG-Net paper.
+ID_class_a: 702                  # The number of ID classes of source domain. For example, 751 for Market, 702 for DukeMTMC
+ID_class_b: 0                    # The number of ID classes of target domain. For example, 751 for Market, 702 for DukeMTMC
+ID_stride: 1                     # Stride in Appearance encoder
+ID_style: AB                     # For time being, we only support AB.
+batch_size: 8                    # BatchSize
+xx_port: 0.9                     # The portion of the single domain batch (src-src/target-taget, or AA/BB)
+ab_port: 0.1                     # The portion of the cross-domain batch (src-target, or AB); xx_port + ab_port == 1
+aa: true                         # Whether to use the AA-type batch
+ab: true                         # Whether to use the AB-type batch
+bb: true                         # Whether to use the BB-type batch
+aa_drop: true                    # Whether to drop the aa batch in self-training
+beta1: 0                         # Adam hyperparameter
+beta2: 0.999                     # Adam hyperparameter
+crop_image_height: 256           # Input height
+crop_image_width: 128            # Input width
+data_root_a: /workspace/home/re-id/datasets/DukeMTMC-reID/pytorch # Source dataset root
+data_root_b: /workspace/home/re-id/datasets/Market/pytorch/       # Target dataset root
+src_model_dir: /workspace/home/re-id/DG-Net++/models/zzd_duke/checkpoints # Source model root
+dis_update_iter: 1               # The frequency to update the discriminator
+dis:
+  # for image discriminator
+  LAMBDA: 0.01                   # the hyperparameter for the regularization term
+  activ: lrelu                   # activation function style [relu/lrelu/prelu/selu/tanh]
+  dim: 32                        # number of filters in the bottommost layer
+  gan_type: lsgan                # GAN loss [lsgan/nsgan]
+  n_layer: 2                     # number of layers in D
+  n_res: 4                       # number of layers in D
+  non_local: 0                   # number of non_local layers
+  norm: none                     # normalization layer [none/bn/in/ln]
+  num_scales: 3                  # number of scales
+  pad_type: reflect              # padding type [zero/reflect]
+  # for domain id discriminator
+  id_ganType: lsgan              # the type of the network of ID discriminator
+  id_activ: lrelu                # activation function style [relu/lrelu/prelu/selu/tanh]
+  id_norm: bn                    # normalization layer [none/bn/in/ln]
+  id_nLayer: 4                   # number of layers in domain id discriminator
+  id_nFilter: 1024               # number of layer filters in domain id discriminator
+  id_ds: 2                       # down sampling rate in domain id discriminator
+display_size: 16                 # How much display images
+erasing_p: 0.5                   # Random erasing probability [0-1]
+gamma: 0.1                       # Learning Rate Decay (except appearance encoder)
+gamma2: 0.1                      # Learning Rate Decay (for appearance encoder)
+gan_w: 1                         # The weight of gan loss
+gen:
+  activ: lrelu                   # activation function style [relu/lrelu/prelu/selu/tanh]
+  dec: basic                     # [basic/parallel/series]
+  dim: 16                        # number of filters in the bottommost layer
+  dropout: 0                     # use dropout in the generator
+  id_dim: 2048                   # length of appearance code
+  mlp_dim: 512                   # number of filters in MLP
+  mlp_norm: none                 # norm in mlp [none/bn/in/ln]
+  n_downsample: 2                # number of downsampling layers in content encoder
+  n_res: 4                       # number of residual blocks in content encoder/decoder
+  non_local: 0                   # number of non_local layer
+  pad_type: reflect              # padding type [zero/reflect]
+  tanh: false                    # use tanh or not at the last layer
+  init: kaiming                  # initialization [gaussian/kaiming/xavier/orthogonal]
+id_adv_w: 1.000                  # The initial weight of domain ID adversarial loss
+id_adv_w_max: 1.000              # The maximum weight of domain ID adversarial loss
+adv_warm_max_round: 1            # The maximum round for domain ID adversarial training
+adv_warm_scale: 0.0000           # How fast to warm up the domain ID adversarial training
+id_w: 1.0                        # The weight of ID loss
+test_batchsize: 80               # The batch size in test time
+input_dim_a: 1                   # We use the gray-scale input, so the input dim is 1
+input_dim_b: 1                   # We use the gray-scale input, so the input dim is 1
+log_iter: 1                      # How often do you want to log the training stats
+lr_id_d: 0.00001                 # Initial domain ID discriminator learning rate
+lr2: 0.00001                     # Initial appearance encoder learning rate
+lr2_ramp_factor: 60              # The factor to multiply the lr2 after switching to self-training
+lr_d: 0.000001                   # Initial discriminator learning rate
+lr_g: 0.000001                   # Initial generator (except appearance encoder) learning rate
+lr_policy: multistep             # Learning rate scheduler [multistep|constant|step]
+max_cyc_w: 2                     # The maximum weight for cycle loss
+max_teacher_w: 2                 # The maximum weight for prime loss (teacher KL loss)
+max_w: 1                         # The maximum weight for feature reconstruction losses
+new_size: 128                    # The resized size
+norm_id: false                   # Do we normalize the appearance code
+num_workers: 4                   # Number of workers to load the data
+id_tgt: false                    # Whether to use identification loss on target domain
+tgt_pos: 0.0                     # Whether to use the identification loss of the positive samples (the samples with the same pseudo-ID of a given sample) in target domain
+pid_w: 1.0                       # Positive ID loss
+pool: max                        # Pooling layer for the appearance encoder
+recon_s_w: 1                     # The initial weight for structure code reconstruction
+recon_f_w: 1                     # The initial weight for appearance code reconstruction
+recon_id_w: 0.5                  # The initial weight for ID reconstruction
+recon_x_cyc_w: 2                 # The initial weight for cycle reconstruction
+recon_x_w: 5                     # The initial weight for self-reconstruction
+recon_xp_w: 5                    # The initial weight for self-identity reconstruction
+recon_xp_tgt_w: 0                # The weight for self-positive-identity reconstruction in target domain
+single: gray                     # Make input to gray-scale
+snapshot_save_iter: 10000        # How often to save the checkpoint 
+sqrt: false                      # Whether use square loss.
+step_size: 120000                # When to decay the learning rate
+teacher: "best-duke"             # Teacher model name. For Market, you can set "best"; For DukeMTMC, you can set `best-duke`; "" means no teacher.
+teacher_w: 2.0                   # The initial weight for prime loss (teacher KL loss)
+teacher_style: 0                 # Teacher style, # 0-Our smooth dynamic label; 1-One-hot dynamic pseudo label; 2-Conditional hard static label; 3-LSRO, static smooth label; 4-Dynamic Soft Two-label
+teacher_tgt: false               # Whether to use the teacher loss on target samples
+train_bn: true                   # Whether we train the bn for the generated image.
+use_decoder_again: true          # Whether we train the decoder on the generatd image.
+use_encoder_again: 0.5           # The probability we train the structure encoder on the generatd image.
+vgg_w: 0                         # We do not use vgg as one kind of inception loss.
+warm_iter: 0                     # When to start warm up the losses (fine-grained/feature reconstruction losses).
+warm_scale: 0.0000               # How fast to warm up
+warm_teacher_iter: 0             # When to start warm up the prime loss
+weight_decay: 0.0005             # Weight decay
+max_iter: 300000                 # When you end the training
+max_round: 40                    # Maximum self-training rounds
+epoch_round: 2                   # Epochs per round in self-training
+epoch_round_adv: 22              # Maximal training epochs of domain ID adversarial training
+randseed: 3                      # Random seed
+time_constraint: false           # Whether to use sequential time constraint in pseudo-label generation
+clustering:
+  eps: 0.45
+  min_samples: 7
