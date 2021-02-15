@@ -44,7 +44,7 @@ Download the dataset Market-1501 ([[Google Drive]](https://drive.google.com/file
 Download the dataset DukeMTMC-reID ([[Google Drive]](https://drive.google.com/open?id=1jjE85dRCMOgRtvJ5RQV9-Afs-2_5dY3O) or [[Baidu Disk]](https://pan.baidu.com/s/1jS0XM7Var5nQGcbf9xUztw) with password: bhbh)
 
 
-Preparation: put the images with the same id in one folder. You may use 
+Preparation: put the images with the same identity in one folder. You may use 
 ```bash
 python prepare-market.py # for Market-1501
 ```
