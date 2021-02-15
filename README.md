@@ -85,7 +85,7 @@ Models to start DG-Net++ training are provided at [[Google Drive]](https://drive
 
 The zip file contains (1) the model pre-trained on ImageNet; 2) DG-Net trained in source domain as the warm-up model for DG-Net++; 3) the teacher model. If you want to train DG-Net, please check [DG-Net](https://github.com/NVlabs/DG-Net). If you want to train the teacher model, please check [person re-id baseline](https://github.com/layumi/Person_reID_baseline_pytorch). And the trained DG-Net and teacher model should be placed in `models/dgnet` and `models/teacher` respectively.
 
-#### Training DG-Net++
+#### Train DG-Net++
 - Market2Duke 
 1. Setup the yaml file. Check out `configs/market2duke.yaml`. Change the data_root field to the path of your prepared folder-based dataset, e.g. `../Market-1501/pytorch`.
 
