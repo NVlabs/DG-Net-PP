@@ -74,7 +74,7 @@ Follow instructions in `./reid_eval` to evaluate the trained DG-Net++ models on 
 ### Training
 
 #### Download the initial models
--  Models to start DG-Net++ training are given from [[Google Drive]](https://drive.google.com/file/d/1MD4ybPs5znc38g3L1Phq7v-3TXuh5tpZ/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1knpyTVu0Z4lyl7rmkzfK7w) with password: b3xn. Download and move them to the folder `models`.
+Models to start DG-Net++ training are provided at [[Google Drive]](https://drive.google.com/file/d/1MD4ybPs5znc38g3L1Phq7v-3TXuh5tpZ/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1knpyTVu0Z4lyl7rmkzfK7w) with password: b3xn. Download and move them to the folder `models`.
 
 ```
 ├── models
@@ -83,7 +83,7 @@ Follow instructions in `./reid_eval` to evaluate the trained DG-Net++ models on 
 │   ├── teacher/                   
 ```
 
-The model zip file includes (1) the ImageNet pretrained model; 2) DG-Net only trained in source domain as warm up models for DG-Net++; 3) the teacher model, which is the same as the teacher network in DG-Net. If you want to train the DG-Net, please check [DG-Net](https://github.com/NVlabs/DG-Net). If you want to train the teach network, please check [person re-id baseline](https://github.com/layumi/Person_reID_baseline_pytorch). And the trained DG-Net and teacher net should be placed in `models/dgnet` and `models/teacher` respectively.
+The zip file contains (1) the model pre-trained on ImageNet; 2) DG-Net trained in source domain as the warm-up model for DG-Net++; 3) the teacher model. If you want to train DG-Net, please check [DG-Net](https://github.com/NVlabs/DG-Net). If you want to train the teacher model, please check [person re-id baseline](https://github.com/layumi/Person_reID_baseline_pytorch). And the trained DG-Net and teacher model should be placed in `models/dgnet` and `models/teacher` respectively.
 
 #### Training DG-Net++
 - Market2Duke 
