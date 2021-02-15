@@ -38,10 +38,10 @@ We have supported:
 ## Getting Started
 
 ### Dataset Preparation
-Download the dataset [Market-1501](http://zheng-lab.cecs.anu.edu.au/Project/project_reid.html) (Dataset links from DG-Net repo: [[Google Drive]](https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view) or [[Baidu Disk]](https://pan.baidu.com/s/1ntIi2Op) with password: rqvf
+Download the dataset Market-1501 (Links: [[Google Drive]](https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view) or [[Baidu Disk]](https://pan.baidu.com/s/1ntIi2Op) with password: rqvf)
 
 
-Download the dataset DukeMTMC-reID from the data links from DG-Net repo: [[Google Drive]](https://drive.google.com/open?id=1jjE85dRCMOgRtvJ5RQV9-Afs-2_5dY3O) or [[Baidu Disk]](https://pan.baidu.com/s/1jS0XM7Var5nQGcbf9xUztw) with password: bhbh
+Download the dataset DukeMTMC-reID (Links: [[Google Drive]](https://drive.google.com/open?id=1jjE85dRCMOgRtvJ5RQV9-Afs-2_5dY3O) or [[Baidu Disk]](https://pan.baidu.com/s/1jS0XM7Var5nQGcbf9xUztw) with password: bhbh)
 
 
 Preparation: put the images with the same id in one folder. You may use 
