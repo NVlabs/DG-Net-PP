@@ -2,7 +2,7 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 
 ## Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification
-#![](NxN.jpg)
+![](teaser.png)
 
 [[Project]](https://github.com/NVlabs/DG-Net-PP) [[Paper]](https://arxiv.org/abs/1904.07223) [[Slides]](https://yzou2.github.io/files/DGNet++_slides.pdf)
 
@@ -55,7 +55,7 @@ Note to modify the dataset path to your own path.
 
 ### Testing
 
-We provide the trained DG-Net++ models which can be used for DG-Net++ performance evaluation. You may download the models from [[Google Drive]](https://drive.google.com/file/d/18rXbDnoTveZ85p4m9mORnikcBsU1rQQu/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1fabMBnFYf1dLsykAkc9sYg) with password: r3d4, and then move these models to the `outputs`.
+We provide the trained DG-Net++ models which can be used for DG-Net++ performance evaluation. You may download the models from [[Google Drive]](https://drive.google.com/file/d/18rXbDnoTveZ85p4m9mORnikcBsU1rQQu/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1fabMBnFYf1dLsykAkc9sYg) with password: r3d4, and then move these models to the `outputs/`
 
 ```
 ├── outputs/
@@ -63,7 +63,7 @@ We provide the trained DG-Net++ models which can be used for DG-Net++ performanc
 │   ├── best-duke2market/
 ```
 
-Follow instructions in `./reid_eval` to evaluate the trained DG-Net++ models on Market2Duke and Duke2Market.
+Follow instructions in [`reid_eval/`](https://github.com/NVlabs/DG-Net-PP/tree/master/reid_eval) to evaluate the trained DG-Net++ models on Market2Duke and Duke2Market.
 
 #### DG-Net++ evaluation
 |   | Rank@1  | Rank@5  | Rank@10  | mAP |
@@ -74,7 +74,7 @@ Follow instructions in `./reid_eval` to evaluate the trained DG-Net++ models on 
 ### Training
 
 #### Download the initial models
-Models to start DG-Net++ training are provided at [[Google Drive]](https://drive.google.com/file/d/1MD4ybPs5znc38g3L1Phq7v-3TXuh5tpZ/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1knpyTVu0Z4lyl7rmkzfK7w) with password: b3xn. Download and move them to the folder `models`.
+Models to start DG-Net++ training are provided at [[Google Drive]](https://drive.google.com/file/d/1MD4ybPs5znc38g3L1Phq7v-3TXuh5tpZ/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1knpyTVu0Z4lyl7rmkzfK7w) with password: b3xn. Download and move them to the folder `models/`.
 
 ```
 ├── models
