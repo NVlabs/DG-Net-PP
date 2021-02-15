@@ -1305,7 +1305,6 @@ class DGNetpp_Trainer(nn.Module):
     def resume_DAt0(self, checkpoint_dir):
         # Load generators
         last_model_name = get_model_list(checkpoint_dir, "gen")
-        # last_model_name = get_model_list('/home/yazou/Projects/DGNet-master/outputs/latest/checkpoints', "gen")
         state_dict = torch.load(last_model_name)
         self.gen_a.load_state_dict(state_dict['a'],strict=False)
         # last_model_name = get_model_list(checkpoint_dir, "gen_b")
@@ -1337,13 +1336,11 @@ class DGNetpp_Trainer(nn.Module):
     def resume_DAt1(self, checkpoint_dir):
         # Load generators
         last_model_name = get_model_list(checkpoint_dir, "gen_a")
-        # last_model_name = get_model_list('/home/yazou/Projects/DGNet-master/outputs/latest/checkpoints', "gen")
         state_dict = torch.load(last_model_name)
         self.gen_a.load_state_dict(state_dict['a'])
         # last_model_name = get_model_list(checkpoint_dir, "gen_b")
         # state_dict = torch.load(last_model_name)
         last_model_name = get_model_list(checkpoint_dir, "gen_b")
-        # last_model_name = get_model_list('/home/yazou/Projects/DGNet-master/outputs/latest/checkpoints', "gen")
         state_dict = torch.load(last_model_name)
         self.gen_b.load_state_dict(state_dict['b'])
         iterations = 0

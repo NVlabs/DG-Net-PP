@@ -18,9 +18,9 @@ beta1: 0                         # Adam hyperparameter
 beta2: 0.999                     # Adam hyperparameter
 crop_image_height: 256           # Input height
 crop_image_width: 128            # Input width
-data_root_a: /workspace/home/re-id/datasets/Market/pytorch # Source dataset root
-data_root_b: /workspace/home/re-id/datasets/DukeMTMC-reID/pytorch/       # Target dataset root
-src_model_dir: /workspace/home/re-id/DG-Net++/models/zzd_market/checkpoints # Source model root
+data_root_a: ./datasets/Market/pytorch # Source dataset root
+data_root_b: ./datasets/DukeMTMC-reID/pytorch/       # Target dataset root
+src_model_dir: ./models/market/checkpoints # Source model root
 dis_update_iter: 1               # The frequency to update the discriminator
 dis:
   # for image discriminator
@@ -96,7 +96,7 @@ single: gray                     # Make input to gray-scale
 snapshot_save_iter: 10000        # How often to save the checkpoint 
 sqrt: false                      # Whether use square loss.
 step_size: 120000                # When to decay the learning rate
-teacher: "best"             # Teacher model name. For Market, you can set "best"; For DukeMTMC, you can set `best-duke`; "" means no teacher.
+teacher: "teacher/market"             # Teacher model name. For Market, you can set "best"; For DukeMTMC, you can set `best-duke`; "" means no teacher.
 teacher_w: 2.0                   # The initial weight for prime loss (teacher KL loss)
 teacher_style: 0                 # Teacher style, # 0-Our smooth dynamic label; 1-One-hot dynamic pseudo label; 2-Conditional hard static label; 3-LSRO, static smooth label; 4-Dynamic Soft Two-label
 teacher_tgt: false               # Whether to use the teacher loss on target samples
