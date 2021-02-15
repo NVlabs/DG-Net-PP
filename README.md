@@ -117,7 +117,7 @@ Intermediate image outputs and model binary files are saved in `outputs/duke2mar
 ```
 
 ## Tips
-Our results on Market2Duke and Duke2Market are slightly different from the numbers in paper. We try our best to make our code deterministic by setting random seed. However, the randomness still exists. We run our code 10 times for each benchmark. For Duke2Market, the mAP for the 10 runs ranges [61.7%, 64.0%], while average is 63.2% and standard deviation is 0.83%. For Market2Duke, the mAP for the 10 runs ranges from [62%,64.2%], while average is 62.8% and standard deviation is 0.73%. You are welcome to let us know if you fix the randomness issue.
+We try our best to make our code deterministic by setting the random seeds. However, the randomness still exists. We run our code 10 times for each benchmark. For Duke2Market, the mAP ranges in [61.7%, 64.0%] with the average 63.2% and standard deviation 0.83%. For Market2Duke, the mAP ranges in [62%, 64.2%] with the average 62.8% and standard deviation 0.73%. You are welcome to let us know if you fix the randomness issue.
 
 Note the format of camera id and number of cameras. For some datasets (e.g., MSMT17), there are more than 10 cameras. You need to modify the preparation and evaluation code to read the double-digit camera id. For some vehicle re-id datasets (e.g., VeRi) having different naming rules, you also need to modify the preparation and evaluation code.
 
@@ -126,7 +126,7 @@ Please cite the following papers if this repo helps your research:
 ```bibtex
 @inproceedings{zou2020joint,
   title={Joint disentangling and adaptation for cross-domain person re-identification},
-  author={Zheng, Zhedong and Yang, Xiaodong and Yu, Zhiding and Vijayakumar Bhagavatula, Yi and Kautz, Jan},
+  author={Zou, Yang and Yang, Xiaodong and Yu, Zhiding and Vijayakumar, Bhagavatula and Kautz, Jan},
   booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
   year={2020}
 }
@@ -140,7 +140,7 @@ Please cite the following papers if this repo helps your research:
 ```
 
 ## Related Work
-DG-Net++ is implemented on top of [DG-Net](https://github.com/NVlabs/DG-Net). We would also like to thank to the great projects in [person re-id baseline](https://github.com/layumi/Person_reID_baseline_pytorch), [DomainAdaptiveReID](https://github.com/LcDog/DomainAdaptiveReID), [MUNIT](https://github.com/NVlabs/MUNIT) and [DRIT](https://github.com/HsinYingLee/DRIT).
+We would like to thank to the great project [DG-Net](https://github.com/NVlabs/DG-Net), which DG-Net++ is implemented on top of. 
 
 ## License
 Copyright (C) 2019 NVIDIA Corporation. All rights reserved. Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (**Attribution-NonCommercial-ShareAlike 4.0 International**). The code is released for academic research use only. For commercial use, please contact [researchinquiries@nvidia.com](researchinquiries@nvidia.com).
