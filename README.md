@@ -117,7 +117,7 @@ Intermediate image outputs and model binary files are saved in `outputs/duke2mar
 ```
 
 ## Tips
-We try our best to make our code deterministic by setting the random seeds. However, the randomness still exists. We run our code 10 times for each benchmark. For Duke2Market, the mAP ranges in [61.7%, 64.0%] with the average 63.2% and standard deviation 0.83%. For Market2Duke, the mAP ranges in [62%, 64.2%] with the average 62.8% and standard deviation 0.73%. You are welcome to let us know if you fix the randomness issue.
+We try our best to make our code deterministic by setting the random seeds. However, the randomness still exists. We run our code 10 times for each benchmark. For Duke2Market, the mAP ranges in [61.7%, 64.0%] with the average 63.2% and standard deviation 0.83%. For Market2Duke, the mAP ranges in [62%, 64.2%] with the average 62.8% and standard deviation 0.73%. You are welcome to let us know if you could fully fix the randomness issue.
 
 Note the format of camera id and number of cameras. For some datasets (e.g., MSMT17), there are more than 10 cameras. You need to modify the preparation and evaluation code to read the double-digit camera id. For some vehicle re-id datasets (e.g., VeRi) having different naming rules, you also need to modify the preparation and evaluation code.
 
