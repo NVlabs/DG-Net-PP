@@ -55,7 +55,7 @@ Note to modify the dataset path to your own path.
 
 ### Testing
 
--  We provide the trained DG-Net++ models which can be used for DG-Net++ performance evaluation. You may download the models from [[Google Drive]](https://drive.google.com/file/d/18rXbDnoTveZ85p4m9mORnikcBsU1rQQu/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1fabMBnFYf1dLsykAkc9sYg) with password: r3d4, and then move these models to the `outputs`.
+We provide the trained DG-Net++ models which can be used for DG-Net++ performance evaluation. You may download the models from [[Google Drive]](https://drive.google.com/file/d/18rXbDnoTveZ85p4m9mORnikcBsU1rQQu/view?usp=sharing) or [[Baidu Disk]](https://pan.baidu.com/s/1fabMBnFYf1dLsykAkc9sYg) with password: r3d4, and then move these models to the `outputs`.
 
 ```
 ├── outputs/
