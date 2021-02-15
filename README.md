@@ -140,7 +140,7 @@ Please cite the following papers if this repo helps your research:
 ```
 
 ## Related Work
-We would like to thank to the great project [DG-Net](https://github.com/NVlabs/DG-Net), which DG-Net++ is implemented on top of. 
+We would like to thank to the great project [DG-Net](https://github.com/NVlabs/DG-Net), which DG-Net++ is implemented upon. 
 
 ## License
 Copyright (C) 2019 NVIDIA Corporation. All rights reserved. Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (**Attribution-NonCommercial-ShareAlike 4.0 International**). The code is released for academic research use only. For commercial use, please contact [researchinquiries@nvidia.com](researchinquiries@nvidia.com).
