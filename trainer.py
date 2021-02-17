@@ -1404,7 +1404,7 @@ class DGNetpp_Trainer(nn.Module):
         image_datasets = {x: torchvision.datasets.ImageFolder(os.path.join(data_dir, x), data_transforms) for x in
                           ['gallery', 'query']}
         dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=opt['test_batchsize'],
-                                                      shuffle=False, num_workers=16) for x in ['gallery', 'query']}
+                                                      shuffle=False, num_workers=0) for x in ['gallery', 'query']}
 
         gallery_path = image_datasets['gallery'].imgs
         query_path = image_datasets['query'].imgs
@@ -1475,7 +1475,7 @@ class DGNetpp_Trainer(nn.Module):
         data_dir = test_dir
         image_datasets = {x: torchvision.datasets.ImageFolder(os.path.join(data_dir, x), data_transforms) for x in ['train_all']}
         dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=opt['test_batchsize'],
-                                                      shuffle=False, num_workers=16) for x in ['train_all']}
+                                                      shuffle=False, num_workers=0) for x in ['train_all']}
         train_path = image_datasets['train_all'].imgs
         # Extract feature
         with torch.no_grad():

@@ -135,6 +135,8 @@ We try our best to make our code deterministic by setting the random seeds. Howe
 
 Note the format of camera id and number of cameras. For some datasets (e.g., MSMT17), there are more than 10 cameras. You need to modify the preparation and evaluation code to read the double-digit camera id. For some vehicle re-id datasets (e.g., VeRi) having different naming rules, you also need to modify the preparation and evaluation code.
 
+You can try to set num_workers=0 in config yaml file if there is a deadlock in data loading for evalution or training.
+
 ## Citation
 Please cite the following papers if this repo helps your research:
 ```bibtex
@@ -157,4 +159,4 @@ Please cite the following papers if this repo helps your research:
 We would like to thank to the great project [DG-Net](https://github.com/NVlabs/DG-Net), which DG-Net++ is implemented upon. 
 
 ## License
-Copyright (C) 2019 NVIDIA Corporation. All rights reserved. Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (**Attribution-NonCommercial-ShareAlike 4.0 International**). The code is released for academic research use only. For commercial use, please contact [researchinquiries@nvidia.com](researchinquiries@nvidia.com).
+Please check the LICENSE file. DG-Net++ may be used non-commercially, meaning for research or evaluation purposes only. For business inquiries, please contact [researchinquiries@nvidia.com](mailto:researchinquiries@nvidia.com).
