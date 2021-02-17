@@ -29,7 +29,7 @@ from reIDmodel import ft_net, ft_netAB, ft_net_dense, PCB, PCB_test
 parser = argparse.ArgumentParser(description='Training')
 parser.add_argument('--gpu_ids',default='0', type=str,help='gpu_ids: e.g. 0  0,1,2  0,2')
 parser.add_argument('--which_epoch',default=100000, type=int, help='80000')
-parser.add_argument('--test_dir',default='datasets/DukeMTMC-reID/pytorch',type=str, help='./test_data')
+parser.add_argument('--test_dir',default='../datasets/DukeMTMC-reID/pytorch',type=str, help='./test_data')
 parser.add_argument('--name', default='test', type=str, help='save model path')
 parser.add_argument('--batchsize', default=80, type=int, help='batchsize')
 parser.add_argument('--use_dense', action='store_true', help='use densenet121' )

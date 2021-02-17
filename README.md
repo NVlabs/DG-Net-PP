@@ -4,7 +4,7 @@
 ## Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification
 ![](teaser.png)
 
-[[Project]](https://github.com/NVlabs/DG-Net-PP) [[Paper]](https://arxiv.org/abs/1904.07223) [[Slides]](https://yzou2.github.io/files/DGNet++_slides.pdf)
+[[Project]](https://github.com/NVlabs/DG-Net-PP) [[Paper]](https://arxiv.org/pdf/2007.10315.pdf) [[Slides]](https://yzou2.github.io/files/DGNet++_slides.pdf)
 
 Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification, ECCV (Oral)<br>
 [Yang Zou](https://yzou2.github.io/), [Xiaodong Yang](https://xiaodongyang.org/), [Zhiding Yu](https://chrisding.github.io/), [Vijayakumar Bhagavatula](http://users.ece.cmu.edu/~kumar/), [Jan Kautz](http://jankautz.com/) <br>
@@ -13,6 +13,7 @@ Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification, EC
 * [Features](#features)
 * [Prerequisites](#prerequisites)
 * [Getting Started](#getting-started)
+    * [Installation](#installation)
     * [Dataset Preparation](#dataset-preparation)
     * [Testing](#testing)
     * [Training](#training)
@@ -35,7 +36,17 @@ We have supported:
 - PyTorch 1.1
 - torchvision 0.2.1
 
+Check `requirements_full.txt` for more details about packages and versions.
+
 ## Getting Started
+
+### Installation
+- Install [PyTorch](http://pytorch.org/) or from [Previous PyTorch Versions](https://pytorch.org/get-started/previous-versions/)
+For example: 
+```
+conda install pytorch==1.1.0 torchvision==0.2.1 cudatoolkit=10.0 -c pytorch
+```
+- pip install -r requirements.txt
 
 ### Dataset Preparation
 Download the dataset Market-1501 ([[Google Drive]](https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view) or [[Baidu Disk]](https://pan.baidu.com/s/1ntIi2Op) with password: rqvf)
@@ -78,9 +89,9 @@ Models to start DG-Net++ training are provided at [[Google Drive]](https://drive
 
 ```
 ├── models
-│   ├── imagenet-pretrained/                   
-│   ├── dgnet/                   
-│   ├── teacher/                   
+│   ├── imagenet-pretrained/
+│   ├── dgnet/
+│   ├── teacher/
 ```
 
 The zip file contains (1) the model pre-trained on ImageNet; 2) DG-Net trained in source domain as the warm-up model for DG-Net++; 3) the teacher model. If you want to train DG-Net, please check [DG-Net](https://github.com/NVlabs/DG-Net). If you want to train the teacher model, please check [person re-id baseline](https://github.com/layumi/Person_reID_baseline_pytorch). And the trained DG-Net and teacher model should be placed in `models/dgnet` and `models/teacher` respectively.
@@ -98,7 +109,7 @@ Intermediate image outputs and model binary files are saved in `outputs/market2d
 
 3. Check the metrics and loss log
 ```
- tensorboard --logdir logs/market2duke
+tensorboard --logdir logs/market2duke
 ```
 
 - Duke2Market
@@ -113,7 +124,7 @@ Intermediate image outputs and model binary files are saved in `outputs/duke2mar
 
 3. Check the metrics and loss log
 ```
- tensorboard --logdir logs/duke2market
+tensorboard --logdir logs/duke2market
 ```
 
 ## Tips

@@ -108,7 +108,7 @@ warm_iter: 0                     # When to start warm up the losses (fine-graine
 warm_scale: 0.0000               # How fast to warm up
 warm_teacher_iter: 0             # When to start warm up the prime loss
 weight_decay: 0.0005             # Weight decay
-max_iter: 300000                 # When you end the training
+max_iter: 250000                 # When you end the training
 max_round: 40                    # Maximum self-training rounds
 epoch_round: 2                   # Epochs per round in self-training
 epoch_round_adv: 22              # Maximal training epochs of domain ID adversarial training
@@ -116,4 +116,4 @@ randseed: 3                      # Random seed
 time_constraint: false           # Whether to use sequential time constraint in pseudo-label generation
 clustering:
   eps: 0.45
-  min_samples: 7a
+  min_samples: 7

@@ -20,7 +20,7 @@ crop_image_height: 256           # Input height
 crop_image_width: 128            # Input width
 data_root_a: ./datasets/Market/pytorch # Source dataset root
 data_root_b: ./datasets/DukeMTMC-reID/pytorch/       # Target dataset root
-src_model_dir: ./models/market/checkpoints # Source model root
+src_model_dir: ./models/dgnet/market/checkpoints # Source model root
 dis_update_iter: 1               # The frequency to update the discriminator
 dis:
   # for image discriminator
@@ -108,7 +108,7 @@ warm_iter: 0                     # When to start warm up the losses (fine-graine
 warm_scale: 0.0000               # How fast to warm up
 warm_teacher_iter: 0             # When to start warm up the prime loss
 weight_decay: 0.0005             # Weight decay
-max_iter: 300000                 # When you end the training
+max_iter: 250000                 # When you end the training
 max_round: 40                    # Maximum self-training rounds
 epoch_round: 2                   # Epochs per round in self-training
 epoch_round_adv: 22              # Maximal training epochs of domain ID adversarial training
