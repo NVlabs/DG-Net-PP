@@ -1,7 +1,7 @@
 ## Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification
 ![](teaser.png)
 
-[[Project]](https://github.com/NVlabs/DG-Net-PP) [[Paper]](https://arxiv.org/pdf/2007.10315.pdf) [[Slides]](https://yzou2.github.io/files/DGNet++_slides.pdf)
+[[Project]](https://github.com/NVlabs/DG-Net-PP) [[Paper]](https://arxiv.org/pdf/2007.10315.pdf) [[Supp]](http://xiaodongyang.org/publications/papers/dgnetpp-supp-eccv20.pdf) [[Slides]](https://yzou2.github.io/files/DGNet++_slides.pdf)
 
 Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification, ECCV (Oral)<br>
 [Yang Zou](https://yzou2.github.io/), [Xiaodong Yang](https://xiaodongyang.org/), [Zhiding Yu](https://chrisding.github.io/), [Vijayakumar Bhagavatula](http://users.ece.cmu.edu/~kumar/), [Jan Kautz](http://jankautz.com/) <br>
@@ -131,8 +131,6 @@ tensorboard --logdir logs/duke2market
 We try our best to make our code deterministic by setting the random seeds. However, the randomness still exists. We run our code 10 times for each benchmark. For Duke2Market, the mAP ranges in [61.7%, 64.0%] with the average 63.2% and standard deviation 0.83%. For Market2Duke, the mAP ranges in [62%, 64.2%] with the average 62.8% and standard deviation 0.73%. You are welcome to let us know if you could fully fix the randomness issue.
 
 Note the format of camera id and number of cameras. For some datasets (e.g., MSMT17), there are more than 10 cameras. You need to modify the preparation and evaluation code to read the double-digit camera id. For some vehicle re-id datasets (e.g., VeRi) having different naming rules, you also need to modify the preparation and evaluation code.
-
-You can try to set num_workers=0 in config yaml file if there is a deadlock in data loading for evalution or training.
 
 ## Citation
 Please cite the following papers if this repo helps your research:
