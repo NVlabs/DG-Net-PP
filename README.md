@@ -8,7 +8,6 @@
 
 Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification, ECCV (Oral)<br>
 [Yang Zou](https://yzou2.github.io/), [Xiaodong Yang](https://xiaodongyang.org/), [Zhiding Yu](https://chrisding.github.io/), [Vijayakumar Bhagavatula](http://users.ece.cmu.edu/~kumar/), [Jan Kautz](http://jankautz.com/) <br>
-[[Paper]](https://arxiv.org/abs/1904.07223) [[Project]](https://github.com/NVlabs/DG-Net-PP) [[Slides]](https://yzou2.github.io/files/DGNet++_slides.pdf)  
 
 ## Table of contents
 * [Features](#features)
@@ -43,11 +42,14 @@ Check `requirements_full.txt` for more details about packages and versions.
 
 ### Installation
 - Install [PyTorch](http://pytorch.org/) or from [Previous PyTorch Versions](https://pytorch.org/get-started/previous-versions/)
+
 For example: 
 ```
 conda install pytorch==1.1.0 torchvision==0.2.1 cudatoolkit=10.0 -c pytorch
 ```
-- pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 ### Dataset Preparation
 Download the dataset Market-1501 ([[Google Drive]](https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view) or [[Baidu Disk]](https://pan.baidu.com/s/1ntIi2Op) with password: rqvf)
