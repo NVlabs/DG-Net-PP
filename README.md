@@ -8,6 +8,7 @@
 
 Joint Disentangling and Adaptation for Cross-Domain Person Re-Identification, ECCV (Oral)<br>
 [Yang Zou](https://yzou2.github.io/), [Xiaodong Yang](https://xiaodongyang.org/), [Zhiding Yu](https://chrisding.github.io/), [Vijayakumar Bhagavatula](http://users.ece.cmu.edu/~kumar/), [Jan Kautz](http://jankautz.com/) <br>
+[[Paper]](https://arxiv.org/abs/1904.07223) [[Project]](https://github.com/NVlabs/DG-Net-PP) [[Slides]](https://yzou2.github.io/files/DGNet++_slides.pdf)  
 
 ## Table of contents
 * [Features](#features)
