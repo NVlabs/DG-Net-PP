@@ -1412,6 +1412,7 @@ class DGNetpp_Trainer(nn.Module):
         gallery_cam, gallery_label, _ = get_id(gallery_path, time_constraint = opt['time_constraint'])
         query_cam, query_label, _ = get_id(query_path, time_constraint = opt['time_constraint'])
 
+
         ######################################################################
         # Load Collected data Trained model
         print('-------test-----------')
